@@ -23,6 +23,6 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
-          target: 'https://dev.vyaguta.lftechnology.com.np/'
+          target: 'https://www.lftechnology.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
