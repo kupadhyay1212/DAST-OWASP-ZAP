@@ -23,6 +23,6 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
-          target: 'https://dev.emc-portal.com/'
+          target: 'https://api.dev.emc-portal.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
