@@ -17,12 +17,12 @@ jobs:
           ref: master
       - name: ZAP Scan
   # full active scan before reporting the results, https://github.com/marketplace/actions/owasp-zap-full-scan   
-        uses: zaproxy/action-full-scan@v0.6.0
+        uses: zaproxy/action-full-scan@v0.8.0
   # The passive scanning to complete before reporting the results https://github.com/marketplace/actions/owasp-zap-baseline-scan
-      #  uses: zaproxy/action-baseline@v0.8.2           
+      #  uses: zaproxy/action-baseline@v0.8.2         
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
-          target: 'https://learning.lftechnology.com/'
+          target: 'https://arlington.uat.healthhub.signetic.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
