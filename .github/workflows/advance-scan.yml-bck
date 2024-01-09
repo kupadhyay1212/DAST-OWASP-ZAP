@@ -18,8 +18,8 @@ jobs:
       - name: ZAP Scan
         uses:  zaproxy/action-full-scan@v0.8.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PERSONAL_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
-          target: 'https://api.dev.emc-portal.com'
+          target: 'https://arlington.uat.healthhub.signetic.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
